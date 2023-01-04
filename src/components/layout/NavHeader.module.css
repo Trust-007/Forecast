@@ -24,6 +24,17 @@ nav {
   text-decoration: none;
 }
 
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.magnify {
+  font-size: 24px;
+  cursor: pointer;
+}
+
 input {
   width: 250px;
   outline: none;

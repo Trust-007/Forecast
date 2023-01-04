@@ -6,7 +6,7 @@ import classes from "./ForecastDetail.module.css";
 
 const apiKey = process.env.REACT_APP_KEY;
 const ForecastDetail = () => {
-  const forecast = useSelector((state) => state.forecast);
+  const forecast = useSelector((state) => state.forecast.list);
   const param = useParams();
   const [data, setData] = useState(null);
   useEffect(() => {
