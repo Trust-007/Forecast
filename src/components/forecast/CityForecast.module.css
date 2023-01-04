@@ -5,9 +5,15 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: rgb(252, 115, 137);
+  background-color: rgb(61, 191, 243);
   text-decoration: none;
   color: black;
+  border-bottom: 2px solid black;
+}
+
+.card:nth-of-type(odd) {
+  background-color: rgb(4, 47, 65);
+  color: beige;
 }
 
 .city {

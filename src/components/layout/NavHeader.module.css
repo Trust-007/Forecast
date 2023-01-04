@@ -3,21 +3,21 @@ nav {
   left: 0;
   right: 0;
   top: 0;
-  height: 50px;
+  height: 30px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 40px;
   margin-inline: auto;
   padding-block: 30px;
-  background-color: white;
+  background-color: rgb(5, 146, 202);
   border-bottom: 1px solid rgb(180, 172, 172);
 }
 
 .logo {
   font-size: 35px;
   background-color: transparent;
-  color: #0290ff;
+  color: white;
   font-family: monospace;
   font-weight: 700;
   margin-left: 60px;

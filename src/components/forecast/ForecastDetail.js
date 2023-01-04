@@ -1,7 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { WiDaySunny, WiMoonWaningCrescent3 } from "react-icons/wi";
+import {
+  BsFillCloudMoonFill,
+  BsFillCloudSunFill,
+  BsFillSunFill,
+  BsMoonFill,
+  BsCloudSnowFill,
+  BsCloudRainHeavyFill,
+} from "react-icons/bs";
 import classes from "./ForecastDetail.module.css";
 
 const apiKey = process.env.REACT_APP_KEY;
@@ -22,7 +29,7 @@ const ForecastDetail = () => {
   }, [param.cityid]);
   const target = forecast.find((item) => item.Key === param.cityid);
   return (
-    <div>
+    <div className={classes.contain}>
       {target && (
         <h1>{`${target.AdministrativeArea.LocalizedName}, ${target.Country.LocalizedName}`}</h1>
       )}
@@ -30,26 +37,44 @@ const ForecastDetail = () => {
         <div>
           <h3>{`Category: ${data.Headline.Category}`}</h3>
           <h3>{`Description: ${data.Headline.Text}`}</h3>
-          <div>
-            <div>
+          <div className={classes.day_night}>
+            <div className={classes.day}>
               <div className={classes.logo}>
                 <h2>Day</h2>
-                <WiDaySunny className={classes.sun} />
+                <BsFillSunFill className={classes.sun} />
               </div>
               <p>{data.DailyForecasts[0].Day.LongPhrase}</p>
-              <p>{`Hours of Rain: ${data.DailyForecasts[0].Day.HoursOfRain}`}</p>
-              <p>{`Hours of Snow: ${data.DailyForecasts[0].Day.HoursOfSnow}`}</p>
-              <p>{`Cloud Cover: ${data.DailyForecasts[0].Day.CloudCover}`}</p>
+              <p>
+                Hours of Rain <BsCloudRainHeavyFill />:
+                {data.DailyForecasts[0].Day.HoursOfRain}
+              </p>
+              <p>
+                Hours of Snow <BsCloudSnowFill />:
+                {data.DailyForecasts[0].Day.HoursOfSnow}
+              </p>
+              <p>
+                Cloud Cover <BsFillCloudSunFill />:{" "}
+                {data.DailyForecasts[0].Day.CloudCover}
+              </p>
             </div>
-            <div>
+            <div className={classes.night}>
               <div className={classes.logo}>
                 <h2>Night</h2>
-                <WiMoonWaningCrescent3 className={classes.moon} />
+                <BsMoonFill className={classes.moon} />
               </div>
               <p>{data.DailyForecasts[0].Night.LongPhrase}</p>
-              <p>{`Hours of Rain: ${data.DailyForecasts[0].Night.HoursOfRain}`}</p>
-              <p>{`Hours of Snow: ${data.DailyForecasts[0].Night.HoursOfSnow}`}</p>
-              <p>{`Cloud Cover: ${data.DailyForecasts[0].Night.CloudCover}`}</p>
+              <p>
+                Hours of Rain <BsCloudRainHeavyFill />:{" "}
+                {data.DailyForecasts[0].Night.HoursOfRain}
+              </p>
+              <p>
+                Hours of Snow <BsCloudSnowFill />:{" "}
+                {data.DailyForecasts[0].Night.HoursOfSnow}
+              </p>
+              <p>
+                Cloud Cover <BsFillCloudMoonFill />:{" "}
+                {data.DailyForecasts[0].Day.CloudCover}
+              </p>
             </div>
           </div>
         </div>

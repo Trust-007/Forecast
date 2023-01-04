@@ -4,8 +4,10 @@
 }
 
 .container {
-  margin-top: 8%;
+  margin-top: 90px;
   width: 100%;
-  min-height: 100vh;
+  min-height: 50vh;
   color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }

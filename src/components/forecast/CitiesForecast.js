@@ -21,6 +21,7 @@ const CitiesForecast = () => {
         key={item.Key}
         id={item.Key}
         city={item.AdministrativeArea.LocalizedName}
+        country={item.Country.LocalizedName}
         lat={item.GeoPosition.Latitude}
         long={item.GeoPosition.Longitude}
       />
