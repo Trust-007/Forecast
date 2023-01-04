@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sun {
+  font-size: 60px;
+  color: yellow;
+}
+
+.moon {
+  font-size: 60px;
+  color: darkblue;
+}

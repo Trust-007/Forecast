@@ -1,0 +1,31 @@
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  margin-inline: auto;
+  padding-block: 30px;
+  background-color: white;
+  border-bottom: 1px solid rgb(180, 172, 172);
+}
+
+.logo {
+  font-size: 35px;
+  background-color: transparent;
+  color: #0290ff;
+  font-family: monospace;
+  font-weight: 700;
+  margin-left: 60px;
+  text-decoration: none;
+}
+
+input {
+  width: 250px;
+  outline: none;
+  padding: 7px;
+}
