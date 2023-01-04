@@ -1,7 +1,5 @@
-import ForecastDetail from "../components/forecast/ForecastDetail";
+import ForecastDetail from '../components/forecast/ForecastDetail';
 
-const Detail = () => {
-  return <ForecastDetail />;
-};
+const Detail = () => <ForecastDetail />;
 
 export default Detail;

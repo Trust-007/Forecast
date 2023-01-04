@@ -1,5 +1,5 @@
-import NavHeader from "./NavHeader";
-import classes from "./Layout.module.css";
+import NavHeader from './NavHeader';
+import classes from './Layout.module.css';
 
 const Layout = (props) => {
   const { children } = props;

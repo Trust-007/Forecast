@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
-import classes from "./CityForecast.module.css";
+import { Link } from 'react-router-dom';
+import classes from './CityForecast.module.css';
 
 const CityForecast = (props) => {
-  const { id, city, lat, long, country } = props;
+  const {
+    id, city, lat, long, country,
+  } = props;
   return (
     <Link to={`/home/${id}`} className={classes.card}>
       <div className={classes.city}>{`${city}, ${country}`}</div>

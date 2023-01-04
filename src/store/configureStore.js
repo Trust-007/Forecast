@@ -1,5 +1,5 @@
-import { configureStore } from "@reduxjs/toolkit";
-import forecastSlice from "./forecast/forecastSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import forecastSlice from './forecast/forecastSlice';
 
 const store = configureStore({
   reducer: {

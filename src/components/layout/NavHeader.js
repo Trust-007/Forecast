@@ -1,18 +1,18 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { forecastActions } from "../../store/forecast/forecastSlice";
-import { Link, useLocation } from "react-router-dom";
-import classes from "./NavHeader.module.css";
-import { FcSearch } from "react-icons/fc";
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Link, useLocation } from 'react-router-dom';
+import { FcSearch } from 'react-icons/fc';
+import { forecastActions } from '../../store/forecast/forecastSlice';
+import classes from './NavHeader.module.css';
 
 const NavHeader = () => {
-  const [getSearch, setGetSearch] = useState("");
+  const [getSearch, setGetSearch] = useState('');
 
   const dispatch = useDispatch();
   const location = useLocation();
 
   const getTextHandler = (e) => {
-    const value = e.target.value;
+    const { value } = e.target;
     setGetSearch(value);
   };
 
@@ -26,7 +26,7 @@ const NavHeader = () => {
         <Link to="/home" className={classes.logo}>
           Forecasty
         </Link>
-        {location.pathname === "/home" && (
+        {location.pathname === '/home' && (
           <div className={classes.search}>
             <input
               type="text"

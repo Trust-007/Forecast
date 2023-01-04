@@ -1,32 +1,30 @@
-import { useSelector } from "react-redux";
-import CityForecast from "./CityForecast";
-import classes from "./CitiesForecast.module.css";
+import { useSelector } from 'react-redux';
+import CityForecast from './CityForecast';
+import classes from './CitiesForecast.module.css';
 
 const CitiesForecast = () => {
   const forecast = useSelector((state) => state.forecast.list);
   const search = useSelector((state) => state.forecast.search);
 
   let hi = forecast;
-  if (search !== "") {
+  if (search !== '') {
     hi = forecast.filter((item) => {
       if (item.Country.LocalizedName.toLowerCase() === search.toLowerCase()) {
         return item;
       }
-      return "";
+      return '';
     });
   }
-  const list = hi.map((item) => {
-    return (
-      <CityForecast
-        key={item.Key}
-        id={item.Key}
-        city={item.AdministrativeArea.LocalizedName}
-        country={item.Country.LocalizedName}
-        lat={item.GeoPosition.Latitude}
-        long={item.GeoPosition.Longitude}
-      />
-    );
-  });
+  const list = hi.map((item) => (
+    <CityForecast
+      key={item.Key}
+      id={item.Key}
+      city={item.AdministrativeArea.LocalizedName}
+      country={item.Country.LocalizedName}
+      lat={item.GeoPosition.Latitude}
+      long={item.GeoPosition.Longitude}
+    />
+  ));
   let content;
   if (list.length === 0) {
     content = <p>No items</p>;

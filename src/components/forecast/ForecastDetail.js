@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import {
   BsFillCloudMoonFill,
   BsFillCloudSunFill,
@@ -8,8 +8,8 @@ import {
   BsMoonFill,
   BsCloudSnowFill,
   BsCloudRainHeavyFill,
-} from "react-icons/bs";
-import classes from "./ForecastDetail.module.css";
+} from 'react-icons/bs';
+import classes from './ForecastDetail.module.css';
 
 const apiKey = process.env.REACT_APP_KEY;
 const ForecastDetail = () => {
@@ -19,7 +19,7 @@ const ForecastDetail = () => {
   useEffect(() => {
     const getForecast = async () => {
       const response = await fetch(
-        `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${param.cityid}?apikey=${apiKey}%20&details=true&metric=true`
+        `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${param.cityid}?apikey=${apiKey}%20&details=true&metric=true`,
       );
       const data = await response.json();
       setData(data);
@@ -45,15 +45,25 @@ const ForecastDetail = () => {
               </div>
               <p>{data.DailyForecasts[0].Day.LongPhrase}</p>
               <p>
-                Hours of Rain <BsCloudRainHeavyFill />:
+                Hours of Rain
+                {' '}
+                <BsCloudRainHeavyFill />
+                :
                 {data.DailyForecasts[0].Day.HoursOfRain}
               </p>
               <p>
-                Hours of Snow <BsCloudSnowFill />:
+                Hours of Snow
+                {' '}
+                <BsCloudSnowFill />
+                :
                 {data.DailyForecasts[0].Day.HoursOfSnow}
               </p>
               <p>
-                Cloud Cover <BsFillCloudSunFill />:{" "}
+                Cloud Cover
+                {' '}
+                <BsFillCloudSunFill />
+                :
+                {' '}
                 {data.DailyForecasts[0].Day.CloudCover}
               </p>
             </div>
@@ -64,15 +74,27 @@ const ForecastDetail = () => {
               </div>
               <p>{data.DailyForecasts[0].Night.LongPhrase}</p>
               <p>
-                Hours of Rain <BsCloudRainHeavyFill />:{" "}
+                Hours of Rain
+                {' '}
+                <BsCloudRainHeavyFill />
+                :
+                {' '}
                 {data.DailyForecasts[0].Night.HoursOfRain}
               </p>
               <p>
-                Hours of Snow <BsCloudSnowFill />:{" "}
+                Hours of Snow
+                {' '}
+                <BsCloudSnowFill />
+                :
+                {' '}
                 {data.DailyForecasts[0].Night.HoursOfSnow}
               </p>
               <p>
-                Cloud Cover <BsFillCloudMoonFill />:{" "}
+                Cloud Cover
+                {' '}
+                <BsFillCloudMoonFill />
+                :
+                {' '}
                 {data.DailyForecasts[0].Day.CloudCover}
               </p>
             </div>

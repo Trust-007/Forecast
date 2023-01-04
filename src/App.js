@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import Home from "./pages/Home";
-import Detail from "./pages/Detail";
-import getData from "./store/forecast/actionThunk";
+import { useEffect } from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import Home from './pages/Home';
+import Detail from './pages/Detail';
+import getData from './store/forecast/actionThunk';
 
 const App = () => {
   const dispatch = useDispatch();

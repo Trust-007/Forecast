@@ -1,7 +1,5 @@
-import CitiesForecast from "../components/forecast/CitiesForecast";
+import CitiesForecast from '../components/forecast/CitiesForecast';
 
-const Home = () => {
-  return <CitiesForecast />;
-};
+const Home = () => <CitiesForecast />;
 
 export default Home;
