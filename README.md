@@ -43,8 +43,6 @@ Forecasty is a weather forecast application. It displays some cites and it's wea
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
 - **[Fetch datas from a database with Redux]**
@@ -52,8 +50,6 @@ Forecasty is a weather forecast application. It displays some cites and it's wea
 - **[Single Page App]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
@@ -148,8 +144,6 @@ If you like this project please give a start⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Thanks to the Microverse team for the great curriculum.
@@ -171,8 +165,6 @@ If you like this project please give a start⭐️
   - [Yes, always.]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
