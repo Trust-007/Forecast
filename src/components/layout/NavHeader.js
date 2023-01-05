@@ -1,23 +1,16 @@
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import { FcSearch } from 'react-icons/fc';
+
 import { forecastActions } from '../../store/forecast/forecastSlice';
 import classes from './NavHeader.module.css';
 
 const NavHeader = () => {
-  const [getSearch, setGetSearch] = useState('');
-
   const dispatch = useDispatch();
   const location = useLocation();
 
-  const getTextHandler = (e) => {
+  const filterHandler = (e) => {
     const { value } = e.target;
-    setGetSearch(value);
-  };
-
-  const filterHandler = () => {
-    dispatch(forecastActions.updateSearch(getSearch));
+    dispatch(forecastActions.updateSearch(value));
   };
 
   return (
@@ -30,12 +23,9 @@ const NavHeader = () => {
           <div className={classes.search}>
             <input
               type="text"
-              placeholder="Search by full country name"
-              onChange={getTextHandler}
+              placeholder="Search by country name"
+              onKeyUp={filterHandler}
             />
-            <button type="button" onClick={filterHandler}>
-              <FcSearch className={classes.magnify} />
-            </button>
           </div>
         )}
       </nav>

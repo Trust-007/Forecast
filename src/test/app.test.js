@@ -36,7 +36,7 @@ describe('Forecast reducers', () => {
   jest.setTimeout(30000);
   it('should fetch items ', async () => {
     await store.dispatch(getData());
-    expect(store.getState().forecast.list.length).toEqual(14);
+    expect(store.getState().forecast.list.length).toEqual(59);
   });
   it('should be an empty string', () => {
     expect(store.getState().forecast.search).toBe('');

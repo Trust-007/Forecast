@@ -49,6 +49,7 @@ const ForecastDetail = () => {
                 {' '}
                 <BsCloudRainHeavyFill />
                 :
+                {' '}
                 {data.DailyForecasts[0].Day.HoursOfRain}
               </p>
               <p>
@@ -56,6 +57,7 @@ const ForecastDetail = () => {
                 {' '}
                 <BsCloudSnowFill />
                 :
+                {' '}
                 {data.DailyForecasts[0].Day.HoursOfSnow}
               </p>
               <p>

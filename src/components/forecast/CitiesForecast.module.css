@@ -1,6 +1,13 @@
 .container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 50% 50%;
+}
+
+.no_item {
+  margin: 30% 90%;
+  color: white;
+  font-size: 20px;
+  width: 100%;
 }
 
 @media (max-width: 600px) {

@@ -6,16 +6,22 @@ const CitiesForecast = () => {
   const forecast = useSelector((state) => state.forecast.list);
   const search = useSelector((state) => state.forecast.search);
 
-  let hi = forecast;
+  let val = forecast;
   if (search !== '') {
-    hi = forecast.filter((item) => {
-      if (item.Country.LocalizedName.toLowerCase() === search.toLowerCase()) {
+    val = forecast.filter((item) => {
+      if (
+        item.Country.LocalizedName.toLowerCase()
+          .split('')
+          .slice(0, search.length)
+          .join('') === search.toLowerCase()
+      ) {
         return item;
       }
       return '';
     });
   }
-  const list = hi.map((item) => (
+
+  const list = val.map((item) => (
     <CityForecast
       key={item.Key}
       id={item.Key}
@@ -27,7 +33,7 @@ const CitiesForecast = () => {
   ));
   let content;
   if (list.length === 0) {
-    content = <p>No items</p>;
+    content = <p className={classes.no_item}>No items</p>;
   } else {
     content = list;
   }
