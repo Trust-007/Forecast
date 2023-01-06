@@ -57,7 +57,7 @@ Forecasty is a weather forecast application. It displays some cites and it's wea
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Here is a live demo](https://spaceship-irm6.onrender.com)
+- [Here is a live demo](https://forecasty.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
