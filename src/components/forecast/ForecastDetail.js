@@ -19,7 +19,7 @@ const ForecastDetail = () => {
   useEffect(() => {
     const getForecast = async () => {
       const response = await fetch(
-        `http://dataservice.accuweather.com/forecasts/v1/daily/1day/${param.cityid}?apikey=${apiKey}%20&details=true&metric=true`,
+        `https://dataservice.accuweather.com/forecasts/v1/daily/1day/${param.cityid}?apikey=${apiKey}%20&details=true&metric=true`,
       );
       const data = await response.json();
       setData(data);

@@ -5,7 +5,7 @@ const apiKey = process.env.REACT_APP_KEY;
 const getData = () => async (dispatch) => {
   const sendRequest = async () => {
     const response = await fetch(
-      `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=California&details=true`,
+      `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${apiKey}&q=California&details=true`,
     );
     const data = await response.json();
 
