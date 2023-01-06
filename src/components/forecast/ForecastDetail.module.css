@@ -52,3 +52,13 @@
   font-size: 40px;
   color: darkblue;
 }
+
+@media (max-width: 600px) {
+  .day {
+    height: 350px;
+  }
+
+  .night {
+    height: 350px;
+  }
+}
