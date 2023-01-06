@@ -1,0 +1,64 @@
+.contain {
+  margin-top: 150px;
+  padding-inline: 5%;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.day_night {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.day {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  background: skyblue;
+  padding: 20px;
+}
+
+.night {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgb(13, 57, 94);
+  padding: 20px;
+  color: azure;
+}
+
+.sun {
+  font-size: 40px;
+  color: yellow;
+}
+
+.moon {
+  font-size: 40px;
+  color: darkblue;
+}
+
+@media (max-width: 600px) {
+  .day {
+    height: 350px;
+  }
+
+  .night {
+    height: 350px;
+  }
+}

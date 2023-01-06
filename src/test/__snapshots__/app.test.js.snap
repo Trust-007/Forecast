@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`display the citie in the page should display all the cities 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <p>
+      No items
+    </p>
+  </div>
+</div>
+`;
+
+exports[`display the rockets in the page should display all the rockets 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <p>
+      No items
+    </p>
+  </div>
+</div>
+`;
+
+exports[`should show the navigation full app rendering/navigating 1`] = `null`;
